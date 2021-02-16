@@ -1,0 +1,1030 @@
+@import mixins
+@import vars
+@import cart
+@import regis
+
+*
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+
+body
+    font-family: lato
+
+summary::-webkit-details-marker
+    display: none
+
+a
+    text-decoration: none
+
+li
+    list-style-type: none
+
+.centre
+    padding-left: calc(50% - 570px)
+    padding-right: calc(50% - 570px)
+
+.header
+    background-color: #222222
+    height: 75px
+    display: flex
+    justify-content: space-between
+    align-items: center
+    position: relative
+
+    &__search
+        margin-left: 41px
+
+    &__lk
+        margin-left: 34px
+        margin-right: 34px
+
+#switcher
+    width: 0
+    &:checked ~ .drop
+        opacity: 1
+        visibility: visible
+
+.dropdown
+    position: relative
+
+.drop
+    z-index: 10
+    background: #FFFFFF
+    box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21)
+    padding: 37px 32px
+    position: absolute
+    top: 53px
+    right: 0
+    opacity: 0
+    width: 232px
+    visibility: hidden
+    height: 768px
+    transition: opacity .4s
+    &__items
+        margin-top: 20px
+    &__name
+        font-family: Lato
+        font-style: normal
+        font-weight: bold
+        font-size: 14px
+        line-height: 17px
+        color: #000000
+    &__heading
+        font-family: Lato
+        font-style: normal
+        font-weight: normal
+        font-size: 14px
+        line-height: 17px
+        color: #F16D7F
+        &:hover
+            text-decoration: anderline
+    &__ul
+        padding-left: 20px
+        margin-top: 12px
+    &__link
+        font-family: Lato
+        font-style: normal
+        font-weight: normal
+        font-size: 14px
+        line-height: 17px
+        color: #6F6E6E
+        display: block
+        margin-bottom: 11px
+        &:hover
+            color: #F16D7F
+.promo
+    background: rgba(113, 103, 105, 0.08)
+    padding-left: calc(50% - 800px)
+    padding-right: calc(50% - 800px)
+    display: flex
+
+    &__left
+        width: 50%
+
+    &__right
+        width: 50%
+        background: #F1E4E6
+        padding-left: 92px
+        display: flex
+        align-items: center
+
+    &__content
+        margin-left: 16px
+
+    &__img
+        width: 100%
+
+.stick
+    width: 12px
+    height: 75px
+    background: #F16D7F
+
+.promo__content
+    font-size: 30px
+    line-height: 40px
+    animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both
+
+@-webkit-keyframes text-focus-in
+  0%
+    -webkit-filter: blur(12px)
+    filter: blur(12px)
+    opacity: 0
+
+  100%
+    -webkit-filter: blur(0px)
+    filter: blur(0px)
+    opacity: 1
+
+@keyframes text-focus-in
+    0%
+        -webkit-filter: blur(12px)
+        filter: blur(12px)
+        opacity: 0
+
+    100%
+        -webkit-filter: blur(0px)
+        filter: blur(0px)
+        opacity: 1
+
+.color_top-text
+    color: #F16D7F
+
+.catalog
+    padding-top: 64px
+    display: flex
+    justify-content: space-between
+
+.img__mini
+    position: relative
+    transition: transform 0.5s
+
+.img__mini:hover
+    transform: scale(1.1)
+
+.catalog__content
+    position: absolute
+    width: 100%
+    height: 100%
+    top: 0
+    left: 0
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+
+.img__mini:not(:last-child)
+    margin-right: 30px
+
+.catalog__img
+    width: 100%
+
+.img_big
+    margin-top: 30px
+    position: relative
+    transition: transform 0.5s
+
+.img_big:hover
+    transform: scale(1.1)
+
+.catalog__text
+    font-size: 16px
+    line-height: 19px
+    text-align: center
+    color: #FFFFFF
+
+.catalog__heading
+    font-size: 24px
+    line-height: 29px
+    text-align: center
+    color: #F16D7F
+
+.content_items
+    text-align: center
+    margin-top: 97px
+
+.heading__items
+    font-size: 30px
+    line-height: 36px
+    color: #222222
+
+.txt__items
+    margin-top: 6px
+    font-size: 14px
+    line-height: 17px
+    color: #9F9F9F
+
+.items
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+    padding-top: 48px
+
+    &_2
+        padding-top: 30px
+
+.card_mb
+    margin-bottom: 30px
+
+.card_items
+    width: 360px
+    background: #F8F8F8
+    position: relative
+
+    &:hover .img__items-card
+        filter: brightness(50%)
+
+    &:hover .add__items
+        display: flex
+        animation: scale-in-center 0.7s cubic-bezier(0.250, 0.460, 0.450, 0.940) both
+
+@-webkit-keyframes scale-in-center
+  0%
+    -webkit-transform: scale(0)
+    transform: scale(0)
+    opacity: 1
+
+  100%
+    -webkit-transform: scale(1)
+    transform: scale(1)
+    opacity: 1
+
+@keyframes scale-in-center
+    0%
+        -webkit-transform: scale(0)
+        transform: scale(0)
+        opacity: 1
+
+    100%
+        -webkit-transform: scale(1)
+        transform: scale(1)
+        opacity: 1
+
+.add__items
+    position: absolute
+    top: 188px
+    left: 111px
+    width: 139px
+    height: 44px
+    border: 1px solid white
+    align-items: center
+    justify-content: center
+    display: none
+
+.txt__add_basket
+    color: white
+    margin-left: 11px
+    font-size: 14px
+    line-height: 17px
+
+.img__items-card
+    width: 100%
+
+.heading__items-card
+    margin-top: 25px
+    margin-left: 18px
+    font-size: 13px
+    line-height: 16px
+    color: #000000
+
+.txt__items-card
+    margin-top: 12px
+    margin-left: 18px
+    font-weight: 300
+    font-size: 14px
+    line-height: 17px
+    color: #5D5D5D
+
+.prise__items-card
+    margin-top: 18px
+    margin-left: 18px
+    margin-bottom: 20px
+    font-size: 16px
+    line-height: 19px
+    color: #F16D7F
+
+.buttom_product
+    width: 211px
+    height: 47px
+    text-align: center
+    margin: auto
+    margin-top: 48px
+    border: 1px solid #FF6A6A
+    transition: transform 0.5s
+
+    &:hover
+        background-color: #F16D7F
+        transform: scale(1.05)
+
+.txt__buttom
+    margin-top: 14px
+    font-size: 16px
+    line-height: 19px
+    color: #F26376
+
+    .buttom_product:hover &
+        color: #FFFFFF
+
+.info_bottom
+    height: 341px
+    margin-top: 95px
+    display: flex
+    align-items: center
+    background: #222224
+
+.card__botton_info
+    flex-direction: column
+
+.img_bottom
+    display: block
+    margin: 0 auto
+    margin-bottom: 28px
+
+.heading__bottom
+    ont-size: 19.96px
+    line-height: 24px
+    margin-bottom: 16px
+    text-align: center
+    color: #FBFBFB
+
+.txt_bottom
+    font-size: 13.972px
+    line-height: 17px
+    text-align: center
+    color: #FBFBFB
+    width: 360px
+
+.footer
+    height: 448px
+    background-image: url(img/footer_img.png)
+    background-repeat: no-repeat
+    background-size: cover
+    background-position: center bottom
+    display: flex
+
+.left__footer
+    width: 50%
+    margin-top: 86px
+
+.right__footer
+    width: 50%
+
+.face__footer
+    margin-left: 125px
+    margin-bottom: 30px
+
+.txt__footer-left
+    font-size: 20px
+    line-height: 24px
+    width: 359px
+    margin-bottom: 126px
+    text-align: center
+    color: #222224
+
+.right__footer
+    text-align: center
+    margin-top: 150px
+    margin-bottom: 150px
+
+.footer__heading
+    font-size: 24px
+    line-height: 167.2%
+    color: #222224
+
+.txt__footer-right
+    font-size: 18px
+    line-height: 167.2%
+    color: #222224
+
+.sub__form
+    display: inline-flex
+    margin-top: 32px
+
+.input__emailarea
+    height: 49px
+    width: 256px
+    background: #E1E1E1
+    outline: none
+    border: none
+    border-radius: 30px 0px 0px 30px
+    padding-left: 40px
+    padding-right: 10px
+
+.button__subscribe
+    align-items: center
+    text-align: center
+    color: #FFFFFF
+    width: 100px
+    height: 49px
+    background: #F16D7F
+    border-radius: 0px 30px 30px 0px
+    outline: none
+    border: none
+    transition: transform 0.5s
+
+    &:hover
+        background: #E05C6E
+        transform: scale(1.05)
+
+.footer_copy
+    height: 79px
+    display: flex
+    justify-content: space-between
+    align-items: center
+    background: #222224
+
+.copy
+    font-size: 16px
+    line-height: 19px
+    color: #FBFBFB
+
+.link__social:not(:last-child)
+    margin-right: 7px
+
+.social
+    display: flex
+
+.link__social
+    width: 32px
+    height: 32px
+    background-color: #FFFFFF
+    display: flex
+    align-items: center
+    flex-direction: column
+
+    &:hover
+        background-color: #F16D7F
+
+.social__img
+    padding-top: 8px
+
+// стили каталога
+
+.catalog_top
+    height: 144px
+    display: flex
+    justify-content: space-between
+    align-items: center
+    background: #F8F3F4
+
+.heading__catalog-top
+    font-size: 24px
+    line-height: 29px
+    color: #F16D7F
+    animation: tracking-in-contract 1.5s cubic-bezier(0.215, 0.610, 0.355, 1.000) both
+
+@-webkit-keyframes tracking-in-contract
+  0%
+    letter-spacing: 1em
+    opacity: 0
+
+  40%
+    opacity: 0.6
+
+  100%
+    letter-spacing: normal
+    opacity: 1
+
+@keyframes tracking-in-contract
+    0%
+        letter-spacing: 1em
+        opacity: 0
+
+    40%
+        opacity: 0.6
+
+    100%
+        letter-spacing: normal
+        opacity: 1
+
+.catalog_top_right
+    font-size: 14px
+    line-height: 17px
+    color: #636363
+
+.href__catalog
+    font-size: 14px
+    line-height: 17px
+    color: #636363
+
+.heading__catalog-right
+    color: #F16D7F
+
+.catalog_filter
+    padding-top: 51px
+    display: flex
+    position: relative
+
+.stick__filter
+    width: 5px
+    height: 37px
+    background: #EF5B70
+
+.filter__left
+    position: absolute
+    padding-top: 16px
+    padding-left: 16px
+    font-size: 14px
+    line-height: 17px
+
+    &_active:hover
+        width: 360px
+        background: #FFFFFF
+        box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21)
+        padding: 16px
+        flex-grow: 1
+        position: absolute
+        z-index: 1
+        color: #EF5B70
+        font-size: 14px
+        line-height: 17px
+
+.summary__filter
+    display: flex
+    align-items: center
+    outline: none
+    border: none
+
+.heading__filter
+    margin-left: 11px
+
+hr
+    height: 1px
+    color: #EBEBEB
+    background-color: #EBEBEB
+    border: none
+
+.ul__filter
+    padding-top: 24px
+    padding-left: 17px
+
+.link__filter
+    font-size: 14px
+    line-height: 17px
+    color: #6F6E6E
+
+.ul__filter li:not(:last-child)
+    padding-bottom: 11px
+
+.filter__left_active svg
+    fill: black
+
+.filter__left_active:hover svg
+    fill: #EF5B70
+
+.filter__items
+    display: none
+
+.details__filter-items:first-child
+    padding-top: 18px
+
+.details__filter-items:not(:last-child)
+    padding-bottom: 16px
+
+.filter__left_active:hover
+    display: block
+    color: #EF5B70
+
+.filter__centr
+    display: flex
+    flex-basis: 66.66666%
+    margin-left: calc(33.3333% - -10px)
+    color: #6F6E6E
+    padding-top: 16px
+
+.sort__open
+    position: relative
+
+.sort__size
+    background: #FFFFFF
+    box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21)
+    padding: 8px 20px 8px 8px
+    display: flex
+    flex-direction: column
+    position: absolute
+    top: 24px
+    left: 8px
+    z-index: 1
+    animation: scale-in-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both
+
+@-webkit-keyframes scale-in-top
+  0%
+    -webkit-transform: scale(0)
+    transform: scale(0)
+    -webkit-transform-origin: 50% 0%
+    transform-origin: 50% 0%
+    opacity: 1
+
+  100%
+    -webkit-transform: scale(1)
+    transform: scale(1)
+    -webkit-transform-origin: 50% 0%
+    transform-origin: 50% 0%
+    opacity: 1
+
+.check__sort
+    margin-right: 10px
+
+.img_tick
+    margin-left: 10px
+    margin-right: 28px
+
+.items_catalog
+    padding-top: 65px
+    &:last-child
+        display: none
+
+.view_items
+    display: flex
+    justify-content: center
+    flex-wrap: wrap
+
+.slider__img_items
+    height: 777px
+    display: flex
+    justify-content: center
+    background-color: #F7F7F7
+
+.txt__items_view
+    width: 1140px
+    background: #FFFFFF
+    border: 1px solid #EAEAEA
+    display: flex
+    flex-direction: column
+    align-items: center
+    margin-top: -50px
+
+.gender__heading
+    font-weight: 300
+    font-size: 14px
+    line-height: 17px
+    color: #F16D7F
+    padding-top: 64px
+
+.img__stick_view
+    padding-top: 12px
+    padding-bottom: 12px
+
+.collection_name
+    font-weight: 300
+    font-size: 18px
+    line-height: 22px
+    color: #4D4D4D
+
+.txt__view-card
+    font-weight: 300
+    font-size: 14px
+    line-height: 17px
+    text-align: center
+    color: #5E5E5E
+    width: 550px
+    padding-top: 48px
+    padding-bottom: 32px
+
+.prise__view-card
+    font-weight: 300
+    font-size: 24px
+    line-height: 29px
+    padding-bottom: 65px
+    color: #EF5B70
+
+.hr__view_items
+    width: 641px
+    border: 1px solid #EAEAEA
+
+.filter__items_view
+    display: flex
+    color: #6F6E6E
+    padding-top: 65px
+    margin-left: 0
+    flex-basis: 0
+
+.add__items_view
+    width: 211px
+    height: 47px
+    border: 1px solid #FF6A6A
+    display: flex
+    align-items: center
+    margin-top: 49px
+    margin-bottom: 65px
+
+.txt__add_basket_view
+    font-size: 16px
+    line-height: 19px
+    color: #F26376
+
+.pink_basket
+    margin-left: 23px
+    margin-right: 23px
+
+.items_preview
+    padding-top: 129px
+    padding-bottom: 34px
+
+@media (max-width: 769px) //планшет
+    .header__left
+        padding-left: 32px
+
+    .header__right
+        padding-right: 32px
+
+    .promo
+
+        &__right
+            padding-left: 40px
+
+        &__content
+            width: 283px
+            font-size: 24px
+
+    .catalog
+        margin-left: 16px
+        margin-right: 16px
+
+    .img_big
+        margin-left: 16px
+        margin-right: 16px
+
+    .items
+        padding-left: 16px
+        padding-right: 16px
+
+    .info_bottom
+        height: auto
+        flex-direction: column
+
+    .card__botton_info
+        padding-top: 48px
+        &:last-child
+            padding-bottom: 48px
+
+    .footer
+        height: auto
+        flex-direction: column
+        display: flex
+        align-items: center
+
+    .txt__footer-left
+        margin-bottom: 48px
+
+    .right__footer
+        margin-top: 0
+        margin-bottom: 140px
+
+    .copy
+        margin-left: 32px
+
+    .social
+        margin-right: 32px
+
+    .catalog_top__left //catalog.htmls
+        padding-left: 16px
+
+    .catalog_top_right
+        padding-right: 16px
+
+    .items_catalog .card_items:last-child
+        display: none
+
+    .info_bottom_none
+        display: none
+
+    .cart //cart.html
+        display: flex
+        flex-direction: column
+        margin-left: 16px
+        margin-right: 16px
+        &__info-right
+            position: relative
+            padding-bottom: 128px
+
+            &-total
+                position: absolute
+                margin-left: 377px
+                margin-top: 38px
+    .card
+        width: 100%
+
+    //regis.html
+    .regis
+        margin-left: 16px
+        margin-right: 16px
+        padding-bottom: 96px
+        &__info
+            padding-left: 22px
+            &_heading
+                font-size: 16px
+                line-height: 19px
+            &_txt
+                font-size: 16px
+                line-height: 19px
+                &ul li::after
+                    content: "url/img/check_mark.svg"
+    .regis__li
+        width: 311px
+@media (max-width:  376px) //моб телефон
+
+    .mob__ver
+        display: none
+
+    .promo
+        width: 100%
+        height: 363px
+
+        &__left
+            display: none
+
+        &__right
+            width: 100%
+
+    .catalog
+        display: flex
+        flex-direction: column
+
+    .img__mini
+        padding-bottom: 32px
+
+    .img__mini:not(:last-child)
+        margin-right: auto
+
+    .img_big
+        margin-left: 16px
+        margin-right: 16px
+        margin-top: 0
+
+    .catalog__img_big
+        height: 111px
+        width: 343px
+
+    .content_items
+        margin-top: 64px
+
+    .items
+        padding-left: 8px
+        padding-right: 8px
+
+    .card_mb
+        margin-bottom: 16px
+
+    .face__footer
+        margin: 0
+
+    .left__footer
+        +centerFlex()
+        margin-top: 54px
+
+    .txt__footer-left
+        font-size: 18px
+        line-height: 22px
+        padding-top: 30px
+
+    .right__footer
+        +centerFlex()
+        margin-bottom: 0
+
+    .txt__footer-right
+        font-size: 14px
+        line-height: 21px
+        width: 271px
+
+    .sub__form
+        margin-top: 22px
+        margin-bottom: 109px
+
+    .footer_copy
+        align-items: center
+        flex-direction: column-reverse
+        align-items: centr
+        height: 100%
+
+    .copy
+        margin: 0
+        padding-bottom: 9px
+
+    .social
+        margin: 0
+        padding-top: 40px
+        padding-bottom: 40px
+
+    .catalog_top
+        display: flex
+        flex-direction: column
+        align-items: center
+
+    .catalog_top__left
+        padding: 0
+        padding-top: 24px
+
+    .catalog_top_right
+        padding: 0
+        padding-bottom: 46px
+
+    .filter__heading
+        display: none
+
+    .filter__left svg
+        width: 37px
+        height: 25px
+
+    .filter__left_active:hover
+        width: 100%
+
+    .filter__centr
+        margin-left: calc(30.3333% - -10px)
+    .summary__filter
+        font-size: 12px
+        line-height: 14px
+    .img_tick
+        margin-right: 11px
+    .sort__size
+        left: -13px
+
+    //card_items
+    .cart
+        margin-left: 9px
+        margin-right: 9px
+    .slider__img_items
+        height: 624px
+
+    .img__items_view
+        width: 374px
+        height: 454px
+
+    .txt__items_view
+        width: 375px
+
+    .txt__view-card
+        width: 326px
+
+    .hr__view_items
+        width: 174px
+
+    .items_preview
+        padding-top: 64px
+        padding-bottom: 64px
+
+    .info_bottom_card
+        display: none
+
+    //cart
+
+    .mob__heading_single
+        padding-top: 50px
+    .card
+        &__img
+            width: 144px
+            height: 188px
+        &__img_del
+            padding-top: 17px
+            & img
+                width: 9px
+                height: 11px
+        &__info_content
+            padding: 13px 39px 13px 17px
+        &__heading
+            font-size: 16px
+            line-height: 19px
+            padding-bottom: 28px
+            width: 143px
+        &__txt
+            font-size: 14px
+            line-height: 17px
+
+        .card_button
+            padding-top: 30px
+            padding-bottom: 48px
+        .left__button
+            width: 174px
+            height: 32px
+            padding: 0 0
+
+    .prise__view-card
+        font-size: 14px
+        line-height: 17px
+
+    .mob_ver
+        text-transform: lowercase
+        &_total
+            position: absolute
+
+    .cart__info-right
+        padding-bottom: 96px
+        &-total
+            position: relative
+            margin-left: 0
+
+    .mob__ver_add
+        margin: 0
+
+    //regis.html
+    .regis
+        margin-left: 9px
+        margin-right: 9px
+        display: flex
+        flex-direction: column
+        &__info
+            padding: 0
+            width: 358px
+            padding-top: 40px
+            &_txt .rigis__ul .regis__li
+                width: 311px

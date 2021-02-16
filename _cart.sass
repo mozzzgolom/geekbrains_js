@@ -1,0 +1,177 @@
+a
+    color: #575757
+
+.cart
+    display: flex
+    justify-content: space-between
+    padding-top: 96px
+
+.card
+    display: flex
+    flex-direction: column
+    width: 650px
+    // height: 300px
+
+    &_mb
+        margin-bottom: 40px
+
+    &__img
+        width: 260px
+        height: 300px
+    &__info
+        // width: 390px
+        display: flex
+        box-shadow: 17px 19px 24px rgba(0, 0, 0, 0.13)
+        position: relative
+
+        &_content
+            padding: 22px 31px 22px 31px
+
+        &__top
+            display: flex
+
+        &_quantity
+            width: 43px
+            height: 24px
+            margin-left: 24px
+            outline: none
+            border: none
+            border: 1px solid #EAEAEA
+
+    &__txt
+        font-size: 22px
+        line-height: 26px
+        color: #575757
+        margin-bottom: 6px
+
+    &__heading
+        width: 262px
+        font-size: 24px
+        line-height: 29px
+        padding-bottom: 42px
+
+    &__img_del
+        margin-left: auto
+        margin-right: 20px
+
+    .card_button
+        display: flex
+        justify-content: space-between
+        padding-top: 42px
+        padding-bottom: 33px
+
+    .left__button
+        border: 1px solid #A4A4A4
+        padding: 17px 39px
+        font-size: 14px
+        line-height: 17px
+        color: #000000
+        background: #FFFFFF
+        outline: none
+        &:hover
+            +hoverButton
+
+.card__img_del
+    position: absolute
+    right: 0
+    padding-top: 28px
+
+    &:hover
+        animation: rotate-vert-center 0.5s cubic-bezier(0.455, 0.030, 0.515, 0.955) both
+
+@-webkit-keyframes rotate-vert-center
+  0%
+    -webkit-transform: rotateY(0)
+    transform: rotateY(0)
+
+  100%
+    -webkit-transform: rotateY(360deg)
+    transform: rotateY(360deg)
+
+@keyframes rotate-vert-center
+    0%
+        -webkit-transform: rotateY(0)
+        transform: rotateY(0)
+
+    100%
+        -webkit-transform: rotateY(360deg)
+        transform: rotateY(360deg)
+
+.cart__info-right
+    display: flex
+    flex-direction: column
+    width: 360px
+
+    &-form-heading
+        margin-bottom: 20px
+        font-size: 16px
+        line-height: 19px
+        font-weight: 300
+        color: #222222
+        outline: none
+
+    &-total
+        width: 360px
+        height: 214px
+        margin-top: 57px
+        background: #F5F3F3
+        padding: 39px 43px
+        text-align: right
+
+    &-total hr
+        color: #E2E2E2
+.cart__form
+    width: 360px
+    height: 44px
+    border: 1px solid #A4A4A4
+    margin-bottom: 20px
+    padding-left: 17px
+    padding-right: 17px
+
+    &_button
+        border: 1px solid #A4A4A4
+        width: 100px
+        height: 34px
+        background: #FFFFFF
+        font-size: 11px
+        line-height: 13px
+        color: #4A4A4A
+        outline: none
+        transition: transform 0.5s
+        &:hover
+            +hoverButton
+
+.total__sub
+    font-size: 11px
+    line-height: 13px
+    font-style: normal
+    font-weight: normal
+    color: #4A4A4A
+    padding-bottom: 12px
+
+.price__total
+    padding-left: 30px
+
+.total__grand
+    font-weight: 300
+    font-size: 16px
+    line-height: 19px
+    color: #222222
+    padding-bottom: 21px
+
+.price__grand
+    padding-left: 30px
+    color: #EF5B70
+
+.checkout__button
+    padding: 15px 41px
+    background: #F16D7F
+    color: #FFFFFF
+    outline: none
+    border: none
+    margin-top: 17px
+    transition: transform 0.5s
+
+    &:hover
+        background: #F16D7F - #111111
+        transform: scale(1.05)

@@ -1,0 +1,81 @@
+.regis
+    margin-top: 64px
+    display: flex
+    justify-content: space-between
+
+    &__form
+        width: 360px
+
+        &_heading
+            font-size: 16px
+            line-height: 19px
+            color: #222222
+            padding-bottom: 20px
+        &_input
+            width: 360px
+            height: 44px
+            padding-left: 17px
+            padding-right: 17px
+            margin-bottom: 20px
+        &_check
+            margin-top: 10px
+            margin-bottom: 33px
+            &-input
+                margin-right: 10px
+
+            &-label
+                margin-right: 20px
+        &_prompt
+            font-size: 13px
+            line-height: 16px
+            color: #B1B1B1
+        &_button
+            margin-top: 39px
+            padding: 20px 29px 20px 29px
+            background: #F16D7F
+            font-size: 14px
+            line-height: 17px
+            color: #FFFFFF
+            border: none
+            transition: transform 0.5s
+
+        &_button:hover
+            background: #F16D7F - #111111
+            transform: scale(1.05)
+
+    &__info
+        width: 650px
+        animation: text-focus-in 2s cubic-bezier(0.550, 0.085, 0.680, 0.530) both
+
+        &_heading
+            font-size: 24px
+            line-height: 29px
+            color: #000000
+            padding-bottom: 22px
+
+        &_txt
+            font-size: 24px
+            line-height: 29px
+            color: #000000
+
+        &_txt ul li:first-child
+            padding-top: 20px
+
+        &_txt ul li
+            padding-bottom: 20px
+
+        &_txt img
+            padding-right: 23px
+.promt-arrow
+    padding-left: 20px
+
+@-webkit-keyframes text-focus-in
+  0%
+    -webkit-filter: blur(12px)
+    filter: blur(12px)
+    opacity: 0
+
+  100%
+    -webkit-filter: blur(0px)
+    filter: blur(0px)
+    opacity: 1

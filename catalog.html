@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>catalog</title>
+    <link rel="stylesheet" href= "style.css">   
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header centre">
+        <div class="header__left">
+            <a href="index.html"><img src="img/logo.svg" alt="logo"></a>           
+            <a href=""><img class="header__search" src="img/search.svg" alt="search"></a>
+        </div>
+        <div class="header__right dropdown">
+            <input id="switcher" type="checkbox">
+            <label for="switcher"><img class="burger" src="img/burger.svg" alt="menu"></label>
+            <nav class="drop">
+                <span class="drop__name">MENU</span>
+                <div class="drop__items">
+                    <a href="catalog.html" class="drop__heading">MEN</a>
+                    <ul class="drop__ul">
+                        <li><a href="catalog.html" class="drop__link">Accessories</a></li>
+                        <li><a href="catalog.html" class="drop__link">Bags</a></li>
+                        <li><a href="catalog.html" class="drop__link">Denim</a></li>
+                        <li><a href="catalog.html" class="drop__link">T-Shirts</a></li>
+                    </ul>
+                </div>
+                <div class="drop__items">
+                    <a href="catalog.html" class="drop__heading">WOMAN</a>
+                    <ul class="drop__ul">
+                        <li><a href="catalog.html" class="drop__link">Accessories</a></li>
+                        <li><a href="catalog.html" class="drop__link">Jackets & Coats</a></li>
+                        <li><a href="catalog.html" class="drop__link">Polos</a></li>
+                        <li><a href="catalog.html" class="drop__link">T-Shirts</a></li>
+                        <li><a href="catalog.html" class="drop__link">Shirts</a></li>
+                    </ul>
+                </div>
+                <div class="drop__items">
+                    <a href="catalog.html" class="drop__heading">KIDS</a>
+                    <ul class="drop__ul">
+                        <li><a href="catalog.html" class="drop__link">Accessories</a></li>
+                        <li><a href="catalog.html" class="drop__link">Jackets & Coats</a></li>
+                        <li><a href="catalog.html" class="drop__link">Polos</a></li>
+                        <li><a href="catalog.html" class="drop__link">T-Shirts</a></li>
+                        <li><a href="catalog.html" class="drop__link">Shirts</a></li>
+                        <li><a href="catalog.html" class="drop__link">Bags</a></li>
+                    </ul>
+                </div>
+            </nav>
+            <a class="mob__ver" href="regis.html"><img class="header__lk" src="img/lk.svg" alt="lk"></a>
+            <a class="mob__ver" href="cart.html"><img src="img/basket.svg" alt="basket"></a>   
+        </div>
+    </header>
+    <div class="catalog_top centre">
+        <div class="catalog_top__left">
+            <p class="heading__catalog-top">NEW ARRIVALS </p>
+        </div>
+        <div class="catalog_top_right">
+            <nav><a class="href__catalog" href="index.html">HOME</a> / <a class="href__catalog" href="#">MEN</a> / <span class="heading__catalog-right">NEW ARRIVALS</span> </nav>
+        </div>
+    </div>
+    <div class="catalog_filter centre ">
+        <div class="filter__left filter__left_active ">
+            <span class="filter__heading">FILTER 
+            </span>
+            <svg width="15" height="10" viewBox="0 0 15 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0.833333 10H4.16667C4.625 10 5 9.625 5 9.16667C5 8.70833 4.625 8.33333 4.16667 8.33333H0.833333C0.375 
+                8.33333 0 8.70833 0 9.16667C0 9.625 0.375 10 0.833333 10ZM0 0.833333C0 
+                1.29167 0.375 1.66667 0.833333 1.66667H14.1667C14.625 1.66667 15 1.29167 
+                15 0.833333C15 0.375 14.625 0 14.1667 0H0.833333C0.375 0 0 0.375 0 0.833333ZM0.833333 5.83333H9.16667C9.625 
+                5.83333 10 5.45833 10 5C10 4.54167 9.625 4.16667 9.16667 4.16667H0.833333C0.375 4.16667 0 4.54167 0 
+                5C0 5.45833 0.375 5.83333 0.833333 5.83333Z" />
+                </svg>
+            <div class="filter__items">
+                <details class="details__filter-items" >
+                    <summary class="summary__filter"> <img src="img/catalog/stick.svg" alt=""> <span class="heading__filter">CATEGORY</span></summary>
+                    <hr class="hr__filter">
+                    <ul class="ul__filter">
+                        <li><a class="link__filter" href="">Hoodies & Sweatshirts</a></li>
+                        <li><a class="link__filter" href="">Jackets & Coats</a></li>
+                        <li><a class="link__filter" href="">Polos</a></li>
+                        <li><a class="link__filter" href="">Shirts</a></li>
+                        <li><a class="link__filter" href="">Shoes</a></li>
+                        <li><a class="link__filter" href="">Sweaters & Knits</a></li>
+                        <li><a class="link__filter" href="">T-Shirts</a></li>
+                        <li><a class="link__filter" href="">Tanks</a></li>
+                    </ul>
+                </details>
+                
+                <details class="details__filter-items">
+                    <summary class="summary__filter"><img src="img/catalog/stick.svg" alt=""> <span class="heading__filter">BRAND</span></summary>
+                    <hr class="hr__filter">
+                    <ul class="ul__filter">
+                        <li><a class="link__filter" href="">1</a></li>
+                        <li><a class="link__filter" href="">2</a></li>
+                    </ul>
+                </details>
+                    
+                <details class="details__filter-items">
+                    <summary class="summary__filter"><img src="img/catalog/stick.svg" alt=""><span class="heading__filter">DESIGNER</span></summary>
+                    <hr class="hr__filter">
+                    <ul class="ul__filter">
+                        <li><a class="link__filter" href="">1</a></li>
+                        <li><a class="link__filter" href="">2</a></li>
+                    </ul>
+                </details>
+                
+            </div>
+        </div>
+        <div class="filter__centr">
+            <details>
+                <summary class="summary__filter">
+                    TRENDING NOW <img class="img_tick" src="img/catalog/tick.svg" alt="">
+                </summary>
+            </details>
+            <details class="sort__open">
+                <summary class="summary__filter">
+                    SIZE <img class="img_tick" src="img/catalog/tick.svg" alt=""></summary>
+                <div class="sort__size">
+                    <label><input class="check__sort" type="checkbox">XS</label>
+                    <label><input class="check__sort" type="checkbox">S</label>
+                    <label><input class="check__sort" type="checkbox">M</label>
+                    <label><input class="check__sort" type="checkbox">l</label>
+                </div>
+            </details>
+            <details>
+                <summary class="summary__filter">
+                    PRICE <img class="img_tick" src="img/catalog/tick.svg" alt="">
+                </summary>
+            </details>
+        </div>
+    </div>
+    <div class="items centre items_catalog">
+        <div class="card_items card_mb">
+            <a href="card_items.html">
+                <img class="img__items-card" src="img/catalog/men/men_1.jpg" alt="model">
+            </a>
+            <a class="add__items" href="">
+                <img src="img/basket.svg" alt=""> <span class="txt__add_basket">Add to Cart</span> 
+            </a>
+            <a href="card_items.html"><h4 class="heading__items-card">ELLERY X M'O CAPSULE</h4></a>
+            <p class="txt__items-card">Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi.</p>
+            <p class="prise__items-card">$52.00</p>
+        </div>
+        <div class="card_items card_mb">
+            <a href="card_items.html">
+                <img class="img__items-card" src="img/catalog/men/men_2.jpg" alt="model">
+            </a>
+            <a class="add__items" href="">
+                <img src="img/basket.svg" alt=""> <span class="txt__add_basket">Add to Cart</span> 
+            </a>
+            <h4 class="heading__items-card">ELLERY X M'O CAPSULE</h4>
+            <p class="txt__items-card">Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi.</p>
+            <p class="prise__items-card">$52.00</p>
+        </div>
+        <div class="card_items card_mb">
+            <a href="card_items.html">
+                <img class="img__items-card" src="img/catalog/men/men_3.jpg" alt="model">
+            </a>
+            <a class="add__items" href="">
+                <img src="img/basket.svg" alt=""> <span class="txt__add_basket">Add to Cart</span> 
+            </a>
+            <h4 class="heading__items-card">ELLERY X M'O CAPSULE</h4>
+            <p class="txt__items-card">Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi.</p>
+            <p class="prise__items-card">$52.00</p>
+        </div>
+        <div class="card_items card_mb ">
+            <a href="card_items.html">
+                <img class="img__items-card" src="img/catalog/men/men_4.jpg" alt="model">
+            </a>
+            <a class="add__items" href="">
+                <img src="img/basket.svg" alt=""> <span class="txt__add_basket">Add to Cart</span> 
+            </a>
+            <h4 class="heading__items-card">ELLERY X M'O CAPSULE</h4>
+            <p class="txt__items-card">Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi.</p>
+            <p class="prise__items-card">$52.00</p>
+        </div>
+        <div class="card_items card_mb">
+            <a href="card_items.html">
+                <img class="img__items-card" src="img/catalog/men/men_5.jpg" alt="model">
+            </a>
+            <a class="add__items" href="">
+                <img src="img/basket.svg" alt=""> <span class="txt__add_basket">Add to Cart</span> 
+            </a>
+            <h4 class="heading__items-card">ELLERY X M'O CAPSULE</h4>
+            <p class="txt__items-card">Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi.</p>
+            <p class="prise__items-card">$52.00</p>
+        </div>
+        <div class="card_items card_mb">
+            <a href="card_items.html">
+                <img class="img__items-card" src="img/catalog/men/men_6.jpg" alt="model">
+            </a>
+            <a class="add__items" href="">
+                <img src="img/basket.svg" alt=""> <span class="txt__add_basket">Add to Cart</span> 
+            </a>
+            <h4 class="heading__items-card">ELLERY X M'O CAPSULE</h4>
+            <p class="txt__items-card">Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi.</p>
+            <p class="prise__items-card">$52.00</p>
+        </div>
+        <div class="card_items card_mb ">
+            <a href="card_items.html">
+                <img class="img__items-card" src="img/catalog/men/men_7.jpg" alt="model">
+            </a>
+            <a class="add__items" href="">
+                <img src="img/basket.svg" alt=""> <span class="txt__add_basket">Add to Cart</span> 
+            </a>
+            <h4 class="heading__items-card">ELLERY X M'O CAPSULE</h4>
+            <p class="txt__items-card">Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi.</p>
+            <p class="prise__items-card">$52.00</p>
+        </div>
+        <div class="card_items card_mb">
+            <a href="card_items.html">
+                <img class="img__items-card" src="img/catalog/men/men_8.jpg" alt="model">
+            </a>
+            <a class="add__items" href="">
+                <img src="img/basket.svg" alt=""> <span class="txt__add_basket">Add to Cart</span> 
+            </a>
+            <h4 class="heading__items-card">ELLERY X M'O CAPSULE</h4>
+            <p class="txt__items-card">Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi.</p>
+            <p class="prise__items-card">$52.00</p>
+        </div>
+        <div class="card_items card_mb">
+            <a href="card_items.html">
+                <img class="img__items-card" src="img/catalog/men/men_9.jpg" alt="model">
+            </a>
+            <a class="add__items" href="">
+                <img src="img/basket.svg" alt=""> <span class="txt__add_basket">Add to Cart</span> 
+            </a>
+            <h4 class="heading__items-card">ELLERY X M'O CAPSULE</h4>
+            <p class="txt__items-card">Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi.</p>
+            <p class="prise__items-card">$52.00</p>
+        </div>
+    </div>
+    <div class="info_bottom centre">
+        <div class="card__botton_info">
+            <img class="img_bottom" src="img/delivery_img.png" alt="delivery">
+            <h3 class="heading__bottom">Free Delivery</h3>
+            <p class="txt_bottom">Worldwide delivery on all. Authorit tively morph next-generation innov tion with extensive models.</p>
+        </div>
+        <div class="card__botton_info">
+            <img class="img_bottom" src="img/sales_img.png" alt="sales">
+            <h3 class="heading__bottom">Sales & discounts</h3>
+            <p class="txt_bottom">Worldwide delivery on all. Authorit tively morph next-generation innov tion with extensive models.</p>
+        </div>
+        <div class="card__botton_info">
+            <img class="img_bottom" src="img/crown_img.png" alt="crown">
+            <h3 class="heading__bottom">Quality assurance</h3>
+            <p class="txt_bottom">Worldwide delivery on all. Authorit tively morph next-generation innov tion with extensive models.</p>
+        </div>
+    </div>
+    <div class="footer centre">
+        <div class="left__footer">
+            <img class="face__footer" src="img/face_footer.png" alt="photo">
+            <p class="txt__footer-left">“Vestibulum quis porttitor dui! Quisque 
+                viverra nunc mi, a pulvinar purus condimentum“</p>
+        </div>
+        <div class="right__footer">
+            <div class="footer__heading">SUBSCRIBE</div>
+            <p class="txt__footer-right">FOR OUR NEWLETTER AND PROMOTION</p>
+            <form class="sub__form">
+                <input class="input__emailarea" type="email" placeholder="Enter Your Email">
+                <button class="button__subscribe">Subscribe</button>
+            </form>
+        </div>
+    </div>
+    <footer class="footer_copy centre">
+        <div class="copy">
+            <p>© 2021  Brand  All Rights Reserved.</p>
+        </div>
+        <div class="social">
+            <div class="link__social">
+                <a href="#"><img class="social__img" src="img/icons/inst.svg" alt="logo inst"></a>
+            </div>
+            <div class="link__social">
+                <a href="#"><img class="social__img" src="img/icons/p.svg" alt="logo p"></a>
+            </div>
+            <div class="link__social">
+                <a href="#"><img class="social__img" src="img/icons/tw.svg" alt="logo tw"></a>
+            </div>
+            <div class="link__social">
+                <a href=""><img class="social__img" src="img/icons/fb.svg" alt="logo fb"></a>
+            </div>    
+        </div>
+    </footer>
+</body>
+</html>
